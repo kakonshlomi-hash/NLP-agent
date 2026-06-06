@@ -1,10 +1,14 @@
 {
   "name": "nlp-master-assistant",
+  "version": "2.0.0",
   "scripts": {
+    "start": "cd server && node index.js",
+    "build": "cd client && npx vite build",
     "dev:server": "cd server && node index.js",
     "dev:client": "cd client && npx vite",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "install:all": "cd server && npm install && cd ../client && npm install"
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "setup": "npm run install:all && npm run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
