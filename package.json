@@ -8,6 +8,7 @@
     "dev:client": "cd client && npx vite",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "postinstall": "cd server && npm install && cd ../client && npm install",
     "setup": "npm run install:all && npm run build"
   },
   "devDependencies": {
